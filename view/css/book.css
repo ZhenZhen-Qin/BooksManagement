@@ -1,0 +1,18 @@
+#newBook{
+    padding-top: 70px;
+    margin-top: 30px;
+    border-top: 3px solid #dddddd;
+}
+
+#imagelist{
+    width: 200px;
+    height: 28px;
+    z-index: 99;
+    border: 1px solid #dddddd;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 16px;
+}
+.updateBtn{
+    margin-left: 300px;
+}

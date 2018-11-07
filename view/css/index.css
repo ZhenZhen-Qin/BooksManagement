@@ -1,0 +1,9 @@
+.typeManage{
+    position: absolute;
+    right: 10px;
+    top: 57px;
+    z-index: 9999;
+}
+.tpl-index-settings-button{
+    position: relative;
+}
