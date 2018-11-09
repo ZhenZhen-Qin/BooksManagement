@@ -107,6 +107,120 @@
   },
   {
     "type": "post",
+    "url": "/book/findBookByKw",
+    "title": "findBookByKw",
+    "name": "findBookByKw",
+    "group": "book",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "keyword",
+            "description": "<p>模糊查询的关键字</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pagesize",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "page",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/bookAdmin.js",
+    "groupTitle": "book"
+  },
+  {
+    "type": "post",
+    "url": "/book/findBooksByType",
+    "title": "findBooksByType",
+    "name": "findBooksByType",
+    "group": "book",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "typeid",
+            "description": "<p>根据书的类别查找书</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/bookAdmin.js",
+    "groupTitle": "book"
+  },
+  {
+    "type": "post",
     "url": "/book/findBooksInfo",
     "title": "findBooksInfo",
     "name": "findBooksInfo",
@@ -127,6 +241,106 @@
             "optional": false,
             "field": "page",
             "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/bookAdmin.js",
+    "groupTitle": "book"
+  },
+  {
+    "type": "post",
+    "url": "/book/findUnitBook",
+    "title": "findUnitBook",
+    "name": "findUnitBook",
+    "group": "book",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>根据书的_id查找书</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/bookAdmin.js",
+    "groupTitle": "book"
+  },
+  {
+    "type": "post",
+    "url": "/book/removeBookInfo",
+    "title": "removeBookInfo",
+    "name": "removeBookInfo",
+    "group": "book",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>数据库自动生成的图书ID</p>"
           }
         ]
       }
@@ -496,6 +710,13 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
+            "field": "_id",
+            "description": "<p>图书id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
             "field": "typeid",
             "description": "<p>类别id</p>"
           },
@@ -591,56 +812,6 @@
   },
   {
     "type": "post",
-    "url": "/book/updateBookInfo",
-    "title": "updateBookInfo",
-    "name": "updateBookInfo",
-    "group": "book",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "_id",
-            "description": "<p>数据库自动生成的图书ID</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/bookAdmin.js",
-    "groupTitle": "book"
-  },
-  {
-    "type": "post",
     "url": "/borrowbook/addBorrowBook",
     "title": "addBorrowBook",
     "name": "addBorrowBook",
@@ -661,6 +832,13 @@
             "optional": false,
             "field": "bookname",
             "description": "<p>书名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "bookid",
+            "description": "<p>书ID</p>"
           },
           {
             "group": "Parameter",
@@ -776,6 +954,170 @@
   },
   {
     "type": "post",
+    "url": "/borrowbook/findBorrowByKw",
+    "title": "findBorrowByKw",
+    "name": "findBorrowByKw",
+    "group": "borrowbook",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "keyword",
+            "description": "<p>模糊查询的关键字</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pagesize",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "page",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/borrowBookAdmin.js",
+    "groupTitle": "borrowbook"
+  },
+  {
+    "type": "post",
+    "url": "/borrowbook/findUnitBorrowBook",
+    "title": "findUnitBorrowBook",
+    "name": "findUnitBorrowBook",
+    "group": "borrowbook",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>要修改的这条记录的id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/borrowBookAdmin.js",
+    "groupTitle": "borrowbook"
+  },
+  {
+    "type": "post",
+    "url": "/borrowbook/removeBorrowBook",
+    "title": "removeBorrowBook",
+    "name": "removeBorrowBook",
+    "group": "borrowbook",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>数据库生成的_id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/borrowBookAdmin.js",
+    "groupTitle": "borrowbook"
+  },
+  {
+    "type": "post",
     "url": "/borrowbook/updateBorrowBook",
     "title": "updateBorrowBook",
     "name": "updateBorrowBook",
@@ -788,7 +1130,7 @@
             "type": "String",
             "optional": false,
             "field": "readerName",
-            "description": "<p>读者名</p>"
+            "description": "<p>读者名不可更改</p>"
           },
           {
             "group": "Parameter",
@@ -796,6 +1138,13 @@
             "optional": false,
             "field": "bookname",
             "description": "<p>书名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "bookid",
+            "description": "<p>书ID</p>"
           },
           {
             "group": "Parameter",
@@ -958,6 +1307,70 @@
             "type": "String",
             "optional": false,
             "field": "page",
+            "description": "<p>第几页</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "C:/Users/覃珍珍/Desktop/backEndSystem/router/readerAdmin.js",
+    "groupTitle": "reader"
+  },
+  {
+    "type": "post",
+    "url": "/reader/findUnitReader",
+    "title": "findUnitReader",
+    "name": "findUnitReader",
+    "group": "reader",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pagesize",
+            "description": "<p>显示的页码的长度</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "page",
+            "description": "<p>第几页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
             "description": "<p>第几页</p>"
           }
         ]

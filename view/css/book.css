@@ -16,3 +16,11 @@
 .updateBtn{
     margin-left: 300px;
 }
+
+.tpl-table-line-img{
+    width: 60px;
+    height: 60px;
+}
+#bookList{
+    min-height: 450px;
+}

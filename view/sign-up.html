@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
+    <title>注册</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,22 +45,26 @@
               </span>
 
 
-                <form class="am-form tpl-form-line-form">
+                <div class="am-form tpl-form-line-form">
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="邮箱">
+                        <input type="text" class="tpl-form-input" id="email" placeholder="邮箱">
 
                     </div>
 
                     <div class="am-form-group">
-                        <input type="text" class="tpl-form-input" id="user-name" placeholder="用户名">
+                        <input type="text" class="tpl-form-input" id="username" placeholder="用户名">
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="请输入密码">
+                        <input type="password" class="tpl-form-input" id="pwd" placeholder="请输入密码">
                     </div>
 
                     <div class="am-form-group">
-                        <input type="password" class="tpl-form-input" id="user-name" placeholder="再次输入密码">
+                        <input type="password" class="tpl-form-input" id="confirmPwd" placeholder="再次输入密码">
+                    </div>
+                    <div class="am-form-group">
+                        <input type="text" class="tpl-form-input" id="YzCode" placeholder="请输入验证码" style="width: 100px;float: left;margin-right: 20px;border: 1px solid #dddddd;height: 40px;padding-left: 5px">
+                        <button id="sendYzCode" style="height: 40px;">点击发送验证码</button><span class="tipYzCode">请输入验证码</span>
                     </div>
 
                     <div class="am-form-group tpl-login-remember-me">
@@ -82,12 +86,14 @@
                         <button type="button" class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn">提交</button>
 
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
     <script src="assets/js/amazeui.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/register.js"></script>
 
 </body>
 

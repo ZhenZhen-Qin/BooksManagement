@@ -39,17 +39,14 @@
                 </div>
                 <!-- 搜索 -->
                 <div class="am-fl tpl-header-search">
-                    <form class="tpl-header-search-form" action="javascript:;">
-                        <button class="tpl-header-search-btn am-icon-search"></button>
-                        <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
-                    </form>
+                    <span style="font-size:28px;margin-top: 20px;">校园图书管理系统</span>
                 </div>
                 <!-- 其它功能-->
                 <div class="am-fr tpl-header-navbar">
                     <ul>
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="javascript:;">欢迎你, <span>Amaze UI</span> </a>
+                            <a href="javascript:;">欢迎你, <span class="uname">Amaze UI</span> </a>
                         </li>
 
                         <!-- 新邮件 -->
@@ -90,7 +87,7 @@
                                         <div class="menu-messages-content">
                                             <div class="menu-messages-content-title">
                                                 <i class="am-icon-circle-o am-text-warning"></i>
-                                                <span>禁言小张</span>
+                                                <span class="uname">禁言小张</span>
                                             </div>
                                             <div class="am-text-truncate"> 为了能最准确的传达所描述的问题， 建议你在反馈时附上演示，方便我们理解。 </div>
                                             <div class="menu-messages-content-time">2016-09-16 上午 09:23</div>
@@ -192,7 +189,7 @@
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-              禁言小张
+              <b class="uname">禁言小张</b>
           </span>
                     <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
                 </div>
@@ -204,33 +201,33 @@
                 <li class="sidebar-nav-heading">图书管理<span class="sidebar-nav-heading-info">（Book management）</span></li>
                 <li class="sidebar-nav-link">
                     <a href="index.html">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 图书类别
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 图书类别（type）
                     </a>
                 </li>
 
                 <li class="sidebar-nav-link">
                     <a href="form.html">
-                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 图书管理(books)
 
                     </a>
                 </li>
 
-                <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li>
+                <li class="sidebar-nav-heading">读者管理<span class="sidebar-nav-heading-info"> (reader management)</span></li>
                 <li class="sidebar-nav-link">
                     <a href="javascript:;" class="sidebar-nav-sub-title active">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 数据列表
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 读者管理
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico sidebar-nav-sub-ico-rotate"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
                         <li class="sidebar-nav-link">
                             <a href="table-list.html">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 文字列表
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 借阅信息
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
                             <a href="table-list-img.html"  class="sub-active">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 图文列表
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 读者信息
                             </a>
                         </li>
                     </ul>
@@ -259,9 +256,9 @@
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             <div class="widget-head am-cf">
-                                <div class="widget-title  am-cf">文章列表</div>
-
-
+                                <div class="widget-title  am-cf">读者列表
+                                    <span style="float: right">共有 <b class="total">0</b> 条数据</span>
+                                </div>
                             </div>
                             <div class="widget-body  am-fr">
 
@@ -269,33 +266,35 @@
                                     <div class="am-form-group">
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                                <button id="newReaderBtn" type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                                <!--<button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>-->
+                                                <!--<button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>-->
+                                                <!--<button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>-->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                                    <div class="am-form-group tpl-table-list-select">
-                                        <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
-            </select>
-                                    </div>
+                                    <!--<div class="am-form-group tpl-table-list-select">-->
+                                        <!--<select id="" data-am-selected="{btnSize: 'sm'}">-->
+                                          <!--<option value="option1">所有类别</option>-->
+                                          <!--<option value="option2">IT业界</option>-->
+                                          <!--<option value="option3">数码产品</option>-->
+                                          <!--<option value="option3">笔记本电脑</option>-->
+                                          <!--<option value="option3">平板电脑</option>-->
+                                          <!--<option value="option3">只能手机</option>-->
+                                          <!--<option value="option3">超极本</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
                                 </div>
                                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
                                     <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
                                         <input type="text" class="am-form-field ">
                                         <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
-          </span>
+                                            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
+                                        </span>
+                                        <!--<span style="float: right">共有 <b class="total">0</b> 条数据</span>-->
+
                                     </div>
                                 </div>
 
@@ -303,14 +302,17 @@
                                     <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
                                         <thead>
                                             <tr>
-                                                <th>文章缩略图</th>
-                                                <th>文章标题</th>
-                                                <th>作者</th>
-                                                <th>时间</th>
+                                                <th>序号</th>
+                                                <th>姓名</th>
+                                                <th>性别</th>
+                                                <th>所在系</th>
+                                                <th>手机号</th>
+                                                <th>年龄</th>
+                                                <th>身份</th>
                                                 <th>操作</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="readerList">
                                             <tr class="gradeX">
                                                 <td>
                                                     <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
@@ -329,105 +331,14 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">有适配微信小程序的计划吗</td>
-                                                <td class="am-text-middle">天纵之人</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="gradeX">
-                                                <td>
-                                                    <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">请问有没有amazeui 分享插件</td>
-                                                <td class="am-text-middle">王宽师</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">关于input输入框的问题</td>
-                                                <td class="am-text-middle">着迷</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">有没有发现官网上的下载包不好用</td>
-                                                <td class="am-text-middle">醉里挑灯看键</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
 
-                                            <tr class="even gradeC">
-                                                <td>
-                                                    <img src="assets/img/k.jpg" class="tpl-table-line-img" alt="">
-                                                </td>
-                                                <td class="am-text-middle">我建议WEB版本文件引入问题</td>
-                                                <td class="am-text-middle">罢了</td>
-                                                <td class="am-text-middle">2016-09-26</td>
-                                                <td class="am-text-middle">
-                                                    <div class="tpl-table-black-operation">
-                                                        <a href="javascript:;">
-                                                            <i class="am-icon-pencil"></i> 编辑
-                                                        </a>
-                                                        <a href="javascript:;" class="tpl-table-black-operation-del">
-                                                            <i class="am-icon-trash"></i> 删除
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
                                             <!-- more data -->
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="am-u-lg-12 am-cf">
-
                                     <div class="am-fr">
-                                        <ul class="am-pagination tpl-pagination">
+                                        <ul class="am-pagination tpl-pagination page">
                                             <li class="am-disabled"><a href="#">«</a></li>
                                             <li class="am-active"><a href="#">1</a></li>
                                             <li><a href="#">2</a></li>
@@ -440,14 +351,104 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
+
+
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="tpl-content-wrapper" id="newReader">
+            <div class="row-content am-cf">
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                        <div class="widget am-cf">
+                            <div class="widget-head am-cf">
+                                <div class="widget-title  am-cf">编辑</div>
+                            </div>
+                            <!--新增读者-->
+                            <div class="widget-body am-fr" >
+                                <div class="am-form tpl-form-border-form tpl-form-border-br">
+                                    <div class="am-form-group">
+                                        <label for="readerName" class="am-u-sm-3 am-form-label bookName">姓名<span class="tpl-form-line-small-title">Name</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="readerName" placeholder="请输入姓名">
+                                            <small>* 必填</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label for="sex" class="am-u-sm-3 am-form-label bookName">性别<span class="tpl-form-line-small-title">sex</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="sex" placeholder="请输入性别">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="am-form-group">
+                                        <label for="dept" class="am-u-sm-3 am-form-label bookName">院系<span class="tpl-form-line-small-title">dept</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="dept" placeholder="请输入院系">
+
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="phone" class="am-u-sm-3 am-form-label bookName">手机号 <span class="tpl-form-line-small-title">phone</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="phone" placeholder="请输入手机号">
+                                            <small>* 必填</small>
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="age" class="am-u-sm-3 am-form-label">年龄 <span class="tpl-form-line-small-title">age</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="age" placeholder="请输入年龄">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label for="status" class="am-u-sm-3 am-form-label">身份 <span class="tpl-form-line-small-title">status</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input type="text" class="tpl-form-input" id="status" placeholder="请输入身份 student/teacher">
+
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="am-form-group">-->
+                                    <!--<label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>-->
+                                    <!--<div class="am-u-sm-9">-->
+                                    <!--<input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly="">-->
+                                    <!--<small>发布时间为必填</small>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button id="addReaderBtn" type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                            <button id="updateReaderBtn" type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </div>
     </div>
     <script src="assets/js/amazeui.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/reader.js"></script>
 
 </body>
 

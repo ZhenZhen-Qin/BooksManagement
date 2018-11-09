@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 let borrowBookSchema = mongoose.Schema({
     readerName:{type:String,required:true},
     bookname:{type:String,required:true},
+    bookid:{type:String,required:true},
     borrowDate:{type:String,required:true},
     returnDate:{type:String,required:true},
     fine:{type:String,default: "0"}  //罚金

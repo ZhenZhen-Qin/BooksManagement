@@ -44,14 +44,20 @@ app.use("/reader",readerRouter);
 const upload = require('./router/upload.js');
 app.use("/uploads",upload);
 
-
-// const getCode = require('./router/setCode.js');
-// app.use("/getCode",getCode);
+//生成验证码
+const getCode = require('./router/setCode.js');
+app.use("/getCode",getCode);
+//发送验证码
+const sendMail = require('./router/sendEmail.js');
+app.use("/sendMail",sendMail);
+//验证前端传过来的验证码是否正确
+const VerificationCode = require('./router/setCode.js');
+app.use("/VerificationCode",VerificationCode);
 
 
 app.listen(3000,()=>{
     console.log("server start in port " + 3000)
-})
+});
 
 
 
